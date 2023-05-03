@@ -16,8 +16,9 @@ let number = ['1','2','3','4','5','6','7', '8', '9'];
 button.setAttribute("style", "background-color:rgb(225,9,245); box-shadow:  0 0 15px rgb(225,9,245)");
 textContentHeader.setAttribute("style","color: white");
 textContentbody.setAttribute("style","color: white");
-textContainer.setAttribute("style", "background-color: black; box-shadow: 0 0 15px rgb(225,9,245),  0 0 75px rgb(225,9,245); border: 1px solid rgb(225,9,245)");
+textContainer.setAttribute("style", "background-color: rgb(0, 0, 0, 0.5); box-shadow: 0 0 15px rgb(225,9,245),  0 0 75px rgb(225,9,245); border: 1px solid rgb(225,9,245)");
 background.setAttribute("style", "background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTVkNWUxZWY3MDMwMDkzYWE0MDhjZDk2MDA3ODIxMjhiOTQ3NzBhZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/3o6fJ1JHgh4Xw4hoK4/giphy.gif)");
+textContainer.children[1].children[0].setAttribute("style","background:url(https://media.giphy.com/media/TlK63EChAGgxq7kTcFW/giphy.gif)");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
