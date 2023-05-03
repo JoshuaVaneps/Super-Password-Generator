@@ -59,20 +59,29 @@ function getPrompt(){
       alert( "Im sorry but length must be bwtween  8 - 128. Please try again.");
       return false
     }
-  if (confirm("Would you like to include upper case characters?")) {
+  let upPrompt=(confirm("Would you like to include upper case characters?")) 
+  if (upPrompt){
     choiceArr = choiceArr.concat(lowerCase);
   }
 
-  if (confirm("Would you like to include lower case characters?")){
+  let lowPrompt=(confirm("Would you like to include lower case characters?"))
+  if (lowPrompt){
     choiceArr = choiceArr.concat(upperCase);
   }
 
-  if (confirm("Would you like to include  numeric characters?")){
+  let numPrompt=(confirm("Would you like to include  numeric characters?"))
+  if (numPrompt){
     choiceArr = choiceArr.concat(number);
   }
 
-  if (confirm("Would you like to include special characters?")){
+  let specPrompt=(confirm("Would you like to include special characters?"))
+  if (specPrompt){
     choiceArr = choiceArr.concat(specialChar);
+  }
+  
+  while ((!upPrompt) && (!lowPrompt) && (!numPrompt) && (!specPrompt)){
+    alert("Sorry you must select atleast one of the options please try again.");
+    return false
   }
   return true;
 }
